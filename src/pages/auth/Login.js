@@ -3,6 +3,7 @@ import styles from './auth.module.scss';
 import Card from '../../components/card/Card';
 import { RiLoginCircleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import PasswordInput from '../../components/PasswordInput';
 
 
 const Login = () => {
@@ -25,9 +26,9 @@ const Login = () => {
             </div>
             <br />
             <p className="--text-center --fw-bold">or</p>
-            <form action="">
+            <form onSubmit={loginUser}>
                 <input type="email" placeholder='Enter your email' required name='email' value={email} onChange={handleInputChange} />
-                <input type="password" placeholder='Enter your password' required name='password' value={password} onChange={handleInputChange} />
+                <PasswordInput type="password" placeholder='Enter your password' name='password' value={password} onChange={handleInputChange} />
 
                 <button type="submit" className='--btn --btn-primary --btn-block'>Login</button>
             </form>
