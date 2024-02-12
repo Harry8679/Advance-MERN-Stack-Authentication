@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './ChangePassword.scss';
 import Card from '../../components/card/Card';
-import me from '../../assets/img/8888.jpg';
 import PageMenu from '../../components/pageMenu/PageMenu';
 import PasswordInput from '../../components/PasswordInput';
 
@@ -21,8 +20,8 @@ const ChangePassword = () => {
       <section>
         <div className="container">
             <PageMenu />
-            <h2>Change Password</h2>
-            <div className="--flex-start profile">
+            <h2 className='--flex-center'>Change Password</h2>
+            <div className="--flex-center change-password">
                 <Card cardClass='card'>
                     <>
                         <form>
