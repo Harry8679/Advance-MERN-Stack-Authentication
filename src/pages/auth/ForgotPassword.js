@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import styles from './auth.module.scss';
 import Card from '../../components/card/Card';
-// import { RiLoginCircleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import PasswordInput from '../../components/PasswordInput';
 import { MdOutlineMailLock } from "react-icons/md";
 
 
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   const handleInputChange = () => {};
 
