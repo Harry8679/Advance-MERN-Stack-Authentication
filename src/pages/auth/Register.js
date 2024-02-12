@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './auth.module.scss';
 import Card from '../../components/card/Card';
 import { LuUserPlus } from "react-icons/lu";
 import { Link } from 'react-router-dom';
 import PasswordInput from '../../components/PasswordInput';
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
+// import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
+import { FaCircleCheck } from "react-icons/fa6";
 
 
 const initialState = {
@@ -26,7 +27,7 @@ const Register = () => {
   const [passLength, setPassLength] = useState(false);
 
   const timesIcon = <ImCross color='red' size={15} />;
-  const checkIcon = <IoCheckmarkDoneOutline color='green' size={15} />;
+  const checkIcon = <FaCircleCheck color='green' size={15} />;
 
   const switchIcon = (condition) => {
     if (condition) {
@@ -40,6 +41,36 @@ const Register = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  useEffect(() => {
+    // Check Lowercase and Uppercase
+    if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+        setUCase(true);
+    } else {
+        setUCase(false);
+    }
+
+    // Check for numbers
+    if (password.match(/([0-9])/)) {
+        setNum(true)
+    } else {
+        setNum(false)
+    }
+
+    // Check for the special characters
+    if (password.match(/([!,@,#,$,%,^,&,*,_,~])/)) {
+        setSChar(true);
+    } else {
+        setSChar(false);
+    }
+
+    // check for Password Length
+    if (password.length > 5) {
+        setPassLength(true);
+    } else {
+        setPassLength(false);
+    }
+  }, [password]);
 
   const loginUser = () => {};
   return (
