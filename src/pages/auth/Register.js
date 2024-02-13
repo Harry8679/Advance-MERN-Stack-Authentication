@@ -64,7 +64,7 @@ const Register = () => {
         setSChar(false);
     }
 
-    // check for Password Length
+    // Check for PASSWORD LENGTH
     if (password.length > 5) {
         setPassLength(true);
     } else {
@@ -109,7 +109,7 @@ const Register = () => {
                         </li>
                         <li>
                             <span className={styles.indicator}>
-                                {switchIcon(num)} &nbsp; At least 6 characters
+                                {switchIcon(passLength)} &nbsp; At least 6 characters
                             </span>
                         </li>
                     </ul>
