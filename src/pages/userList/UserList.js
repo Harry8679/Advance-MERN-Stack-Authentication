@@ -4,6 +4,7 @@ import PageMenu from '../../components/pageMenu/PageMenu';
 import UserStats from '../../components/userStats/UserStats';
 import Search from '../../components/search/Search';
 import { FaRegTrashCan } from "react-icons/fa6";
+import ChangeRole from '../../components/changeRole/ChangeRole';
 
 
 const UserList = () => {
@@ -40,7 +41,7 @@ const UserList = () => {
                         <td>Rudolph</td>
                         <td>rudolph.ebang@gmail.com</td>
                         <td>Admin</td>
-                        <td>ChangeRole</td>
+                        <td><ChangeRole /></td>
                         <td>
                             <span>
                                 <FaRegTrashCan size={20} color='red' />
