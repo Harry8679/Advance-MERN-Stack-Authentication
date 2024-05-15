@@ -3,7 +3,8 @@ import styles from './auth.module.scss';
 import Card from '../../components/card/Card';
 import { Link } from 'react-router-dom';
 import { GrPowerReset } from "react-icons/gr";
-import PasswordInput from '../../components/PasswordInput';
+// import PasswordInput from '../../components/PasswordInput';
+import PasswordInput from '../../components/passwordInput/PasswordInput';
 
 const initialState = {
     name: '',
