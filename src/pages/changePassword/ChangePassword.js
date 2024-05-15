@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ChangePassword.scss';
 import Card from '../../components/card/Card';
 import PageMenu from '../../components/pageMenu/PageMenu';
-import PasswordInput from '../../components/PasswordInput';
+import PasswordInput from '../../components/passwordInput/PasswordInput';
 
 const initialState = {
     oldPassword: '',

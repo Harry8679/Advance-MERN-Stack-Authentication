@@ -3,9 +3,7 @@ import styles from './auth.module.scss';
 import Card from '../../components/card/Card';
 import { LuUserPlus } from "react-icons/lu";
 import { Link } from 'react-router-dom';
-// import PasswordInput from '../../components/PasswordInput';
 import PasswordInput from '../../components/passwordInput/PasswordInput';
-// import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
 import { FaCircleCheck } from "react-icons/fa6";
 
